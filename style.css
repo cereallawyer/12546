@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  background-color: #eef5f1;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background-color: #cce3d1;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 2px solid #9bb99e;
+}
+.logo {
+  height: 50px;
+  width: auto;
+}
+.navbar nav a {
+  margin: 0 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #234c3b;
+}
+.navbar nav a:hover {
+  text-decoration: underline;
+}

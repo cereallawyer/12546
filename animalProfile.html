@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animal Profile – HerdMate</title>
+  <script type="module" src="animalProfile.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("nav-placeholder").innerHTML = html);
+  </script>
+  <h1>Animal Profile</h1>
+  <div id="animalDetails"></div>
+</body>
+</html>

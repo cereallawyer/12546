@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calving Calculator – HerdMate</title>
+  <script type="module" src="calving.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("nav-placeholder").innerHTML = html);
+  </script>
+  <h1>Calving Calculator</h1>
+  <form id="calvingForm">
+    <input type="text" id="animalId" placeholder="Animal ID" required />
+    <input type="date" id="serviceDate" required />
+    <input type="number" id="gestation" placeholder="Gestation (default 283)" />
+    <input type="text" id="sire" placeholder="Sire" />
+    <button type="submit">Add Service Record</button>
+  </form>
+  <hr />
+  <h2>Calving History</h2>
+  <ul id="calvingList"></ul>
+</body>
+</html>

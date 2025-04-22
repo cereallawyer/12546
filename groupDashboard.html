@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Group Performance Dashboard – HerdMate</title>
+  <script type="module" src="groupAnalytics.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("nav-placeholder").innerHTML = html);
+  </script>
+
+  <h1>Group Performance Dashboard</h1>
+  <div id="groupStats"></div>
+</body>
+</html>

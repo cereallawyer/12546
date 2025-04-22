@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Herd Health – HerdMate</title>
+  <script type="module" src="health.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("nav-placeholder").innerHTML = html);
+  </script>
+  <h1>Health & Treatment Log</h1>
+  <form id="healthForm">
+    <input type="text" id="animalId" placeholder="Animal ID" required />
+    <input type="text" id="treatmentType" placeholder="Treatment Type" required />
+    <input type="text" id="medication" placeholder="Medication" />
+    <input type="text" id="dose" placeholder="Dose" />
+    <input type="text" id="notes" placeholder="Notes" />
+    <input type="date" id="followUp" />
+    <button type="submit">Add Treatment</button>
+  </form>
+  <hr />
+  <h2>Treatment History</h2>
+  <ul id="healthList"></ul>
+</body>
+</html>

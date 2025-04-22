@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Performance Tracker with Charts – HerdMate</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="performanceCharts.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("nav-placeholder").innerHTML = html);
+  </script>
+
+  <h1>Performance Tracker</h1>
+
+  <form id="weightForm">
+    <input type="text" id="animalId" placeholder="Animal ID" required />
+    <input type="number" id="weight" placeholder="Weight (kg)" required />
+    <input type="date" id="date" required />
+    <button type="submit">Add Weight</button>
+  </form>
+  <button id="exportCSV">Export as CSV</button>
+
+  <hr />
+  <h2>Weight History Chart</h2>
+  <canvas id="weightChart" width="400" height="200"></canvas>
+
+  <h2>Weight Summary</h2>
+  <div id="summary"></div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Myostatin Tracker – HerdMate</title>
+  <script type="module" src="myostatin.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("nav-placeholder").innerHTML = html);
+  </script>
+  <h1>Myostatin Tracker</h1>
+  <form id="myostatinForm">
+    <input type="text" id="animalId" placeholder="Animal ID" required />
+    <input type="text" id="genotype" placeholder="Genotype (e.g. NT821 Carrier)" required />
+    <button type="submit">Save Genotype</button>
+  </form>
+  <hr />
+  <h2>Myostatin Herd Summary</h2>
+  <ul id="herdSummary"></ul>
+</body>
+</html>
